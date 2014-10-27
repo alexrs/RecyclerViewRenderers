@@ -1,4 +1,4 @@
-package me.alexrs.bender.demo;
+package me.alexrs.bender.demo.renderers;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import me.alexrs.bender.demo.viewholder.ViewHolderZoidberg;
 import me.alexrs.bender.lib.renderer.Renderer;
-import me.alexrs.bender.lib.viewholder.BenderViewHolder;
+import me.alexrs.bender.lib.viewholder.RenderViewHolder;
 
 /**
  * @author Alejandro Rodriguez <alexrs95@gmail.com>
@@ -15,12 +15,12 @@ import me.alexrs.bender.lib.viewholder.BenderViewHolder;
 public class ItemZoidbergRenderer extends Renderer implements View.OnClickListener {
 
 
-    protected ItemZoidbergRenderer(int id) {
+    public ItemZoidbergRenderer(int id) {
         super(id);
     }
 
     @Override
-    public BenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
+    public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
         final ViewHolderZoidberg viewHolder;
         View itemView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(id, viewGroup, false);

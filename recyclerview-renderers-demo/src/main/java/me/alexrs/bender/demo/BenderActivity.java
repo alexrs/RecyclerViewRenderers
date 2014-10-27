@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.alexrs.bender.demo.items.ItemBender;
+import me.alexrs.bender.demo.items.ItemFry;
 import me.alexrs.bender.demo.items.ItemZoidberg;
 import me.alexrs.bender.lib.adapter.RendererAdapter;
 import me.alexrs.bender.lib.builder.RendererBuilder;
@@ -39,8 +40,10 @@ public class BenderActivity extends Activity {
         for (int i = 0; i < 100; i++) {
             items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
             items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
+            items.add(new ItemFry());
             items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
             items.add(new ItemZoidberg("Dr. Zoidberg: Hooray!"));
+            items.add(new ItemFry());
         }
         return items;
     }

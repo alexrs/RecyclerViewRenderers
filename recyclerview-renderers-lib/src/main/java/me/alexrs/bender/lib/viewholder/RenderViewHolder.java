@@ -8,9 +8,9 @@ import me.alexrs.bender.lib.interfaces.Renderable;
 /**
  * @author Alejandro on 20/10/14.
  */
-public abstract class BenderViewHolder<B extends Renderable> extends RecyclerView.ViewHolder {
+public abstract class RenderViewHolder<B extends Renderable> extends RecyclerView.ViewHolder {
 
-    public BenderViewHolder(View itemView) {
+    public RenderViewHolder(View itemView) {
         super(itemView);
     }
 

@@ -3,7 +3,7 @@ package me.alexrs.bender.lib.renderer;
 import android.support.annotation.LayoutRes;
 import android.view.ViewGroup;
 
-import me.alexrs.bender.lib.viewholder.BenderViewHolder;
+import me.alexrs.bender.lib.viewholder.RenderViewHolder;
 
 /**
  * @author Alejandro Rodriguez <alexrs95@gmail.com>
@@ -22,7 +22,7 @@ public abstract class Renderer {
      * @param viewGroup the container
      * @return an instance of the ViewHolder
      */
-   public abstract BenderViewHolder onCreateViewHolder(ViewGroup viewGroup, @LayoutRes int id);
+   public abstract RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, @LayoutRes int id);
 
     /**
      * @return the ID of the layout

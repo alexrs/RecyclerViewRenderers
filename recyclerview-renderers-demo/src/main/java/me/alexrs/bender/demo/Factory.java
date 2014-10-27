@@ -1,5 +1,8 @@
 package me.alexrs.bender.demo;
 
+import me.alexrs.bender.demo.renderers.ItemBenderRenderer;
+import me.alexrs.bender.demo.renderers.ItemFryRenderer;
+import me.alexrs.bender.demo.renderers.ItemZoidbergRenderer;
 import me.alexrs.bender.lib.renderer.Renderer;
 import me.alexrs.bender.lib.interfaces.RendererFactory;
 
@@ -15,6 +18,8 @@ public class Factory implements RendererFactory {
                 return new ItemBenderRenderer(id);
             case R.layout.item_zoidberg:
                 return new ItemZoidbergRenderer(id);
+            case R.layout.item_fry:
+                return new ItemFryRenderer(id);
         }
         return null;
     }

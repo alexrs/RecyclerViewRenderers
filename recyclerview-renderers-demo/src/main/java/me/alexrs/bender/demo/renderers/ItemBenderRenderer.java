@@ -1,4 +1,4 @@
-package me.alexrs.bender.demo;
+package me.alexrs.bender.demo.renderers;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import me.alexrs.bender.demo.viewholder.ViewHolderBender;
 import me.alexrs.bender.lib.renderer.Renderer;
-import me.alexrs.bender.lib.viewholder.BenderViewHolder;
+import me.alexrs.bender.lib.viewholder.RenderViewHolder;
 
 /**
  * @author Alejandro Rodriguez <alexrs95@gmail.com>
@@ -19,11 +19,10 @@ public class ItemBenderRenderer extends Renderer {
     }
 
     @Override
-    public BenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
-        final ViewHolderBender viewHolder;
+    public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
         View itemView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(id, viewGroup, false);
-        viewHolder = new ViewHolderBender(itemView);
+        ViewHolderBender viewHolder = new ViewHolderBender(itemView);
         return viewHolder;
     }
 }

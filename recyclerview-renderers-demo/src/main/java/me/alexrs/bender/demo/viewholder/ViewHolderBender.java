@@ -7,12 +7,12 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import me.alexrs.bender.demo.R;
 import me.alexrs.bender.demo.items.ItemBender;
-import me.alexrs.bender.lib.viewholder.BenderViewHolder;
+import me.alexrs.bender.lib.viewholder.RenderViewHolder;
 
 /**
  * @author Alejandro on 27/10/14.
  */
-public class ViewHolderBender extends BenderViewHolder<ItemBender> {
+public class ViewHolderBender extends RenderViewHolder<ItemBender> {
 
     @InjectView(R.id.title)
     TextView title;

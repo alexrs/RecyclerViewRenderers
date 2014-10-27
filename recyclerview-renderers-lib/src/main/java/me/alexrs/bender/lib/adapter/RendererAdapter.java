@@ -9,12 +9,12 @@ import me.alexrs.bender.lib.renderer.Renderer;
 import me.alexrs.bender.lib.builder.RendererBuilder;
 import me.alexrs.bender.lib.interfaces.Renderable;
 import me.alexrs.bender.lib.interfaces.Builder;
-import me.alexrs.bender.lib.viewholder.BenderViewHolder;
+import me.alexrs.bender.lib.viewholder.RenderViewHolder;
 
 /**
  * @author Alejandro Rodriguez <alexrs95@gmail.com>
  */
-public class RendererAdapter extends RecyclerView.Adapter<BenderViewHolder> {
+public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
 
     /**
      * Adapter data
@@ -44,13 +44,13 @@ public class RendererAdapter extends RecyclerView.Adapter<BenderViewHolder> {
     }
 
     @Override
-    public BenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         renderer = builder.instantiate(viewType).create();
         return renderer.onCreateViewHolder(viewGroup, viewType);
     }
 
     @Override
-    public void onBindViewHolder(BenderViewHolder holder, int position) {
+    public void onBindViewHolder(RenderViewHolder holder, int position) {
         holder.onBindView(data.get(position));
     }
 
@@ -60,19 +60,19 @@ public class RendererAdapter extends RecyclerView.Adapter<BenderViewHolder> {
     }
 
     @Override
-    public void onViewRecycled(BenderViewHolder holder) {
+    public void onViewRecycled(RenderViewHolder holder) {
         super.onViewRecycled(holder);
         holder.onViewRecycled();
     }
 
     @Override
-    public void onViewAttachedToWindow(BenderViewHolder holder) {
+    public void onViewAttachedToWindow(RenderViewHolder holder) {
         super.onViewAttachedToWindow(holder);
         holder.onViewAttachedToWindow();
     }
 
     @Override
-    public void onViewDetachedFromWindow(BenderViewHolder holder) {
+    public void onViewDetachedFromWindow(RenderViewHolder holder) {
         super.onViewDetachedFromWindow(holder);
         holder.onViewDetachedFromWindow();
     }
