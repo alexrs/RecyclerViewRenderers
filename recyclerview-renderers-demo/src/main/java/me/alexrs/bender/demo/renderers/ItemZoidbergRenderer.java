@@ -1,10 +1,11 @@
 package me.alexrs.bender.demo.renderers;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
+import me.alexrs.bender.demo.activities.DetailActivity;
 import me.alexrs.bender.demo.viewholder.ViewHolderZoidberg;
 import me.alexrs.bender.lib.renderer.Renderer;
 import me.alexrs.bender.lib.viewholder.RenderViewHolder;
@@ -21,17 +22,15 @@ public class ItemZoidbergRenderer extends Renderer implements View.OnClickListen
 
     @Override
     public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
-        final ViewHolderZoidberg viewHolder;
         View itemView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(id, viewGroup, false);
         itemView.setOnClickListener(this);
-        viewHolder = new ViewHolderZoidberg(itemView);
-        return viewHolder;
+        return new ViewHolderZoidberg(itemView);
     }
 
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(v.getContext(), "CLICK!", Toast.LENGTH_SHORT).show();
+        v.getContext().startActivity(new Intent(v.getContext(), DetailActivity.class));
     }
 }

@@ -22,7 +22,6 @@ public class ItemBenderRenderer extends Renderer {
     public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
         View itemView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(id, viewGroup, false);
-        ViewHolderBender viewHolder = new ViewHolderBender(itemView);
-        return viewHolder;
+        return new ViewHolderBender(itemView);
     }
 }

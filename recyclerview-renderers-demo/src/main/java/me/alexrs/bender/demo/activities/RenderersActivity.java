@@ -1,4 +1,4 @@
-package me.alexrs.bender.demo;
+package me.alexrs.bender.demo.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.alexrs.bender.demo.Factory;
+import me.alexrs.bender.demo.R;
 import me.alexrs.bender.demo.items.ItemBender;
 import me.alexrs.bender.demo.items.ItemFry;
 import me.alexrs.bender.demo.items.ItemZoidberg;
@@ -16,7 +18,7 @@ import me.alexrs.bender.lib.builder.RendererBuilder;
 import me.alexrs.bender.lib.interfaces.Renderable;
 
 
-public class BenderActivity extends Activity {
+public class RenderersActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
