@@ -1,9 +1,9 @@
-package me.alexrs.bender.lib.interfaces;
+package me.alexrs.recyclerviewrenderers.interfaces;
 
 import android.support.annotation.LayoutRes;
 
 /**
- * @author Alejandro on 02/09/14.
+ * @author Alejandro Rodriguez <https://github.com/Alexrs95>
  */
 public interface Renderable {
 
@@ -11,5 +11,5 @@ public interface Renderable {
      * @return the ID of the Layout to inflate
      */
     @LayoutRes
-    int getBenderableId();
+    int getRenderableId();
 }

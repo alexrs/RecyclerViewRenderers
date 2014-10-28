@@ -1,4 +1,4 @@
-package me.alexrs.bender.demo.viewholder;
+package me.alexrs.recyclerviewrenderers.viewholder;
 
 import android.view.View;
 import android.widget.TextView;
@@ -6,8 +6,7 @@ import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import me.alexrs.bender.demo.R;
-import me.alexrs.bender.demo.items.ItemBender;
-import me.alexrs.bender.lib.viewholder.RenderViewHolder;
+import me.alexrs.recyclerviewrenderers.items.ItemBender;
 
 /**
  * @author Alejandro on 27/10/14.

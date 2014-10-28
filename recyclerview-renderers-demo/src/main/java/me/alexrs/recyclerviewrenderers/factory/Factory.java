@@ -1,10 +1,11 @@
-package me.alexrs.bender.demo;
+package me.alexrs.recyclerviewrenderers.factory;
 
-import me.alexrs.bender.demo.renderers.ItemBenderRenderer;
-import me.alexrs.bender.demo.renderers.ItemFryRenderer;
-import me.alexrs.bender.demo.renderers.ItemZoidbergRenderer;
-import me.alexrs.bender.lib.renderer.Renderer;
-import me.alexrs.bender.lib.interfaces.RendererFactory;
+import me.alexrs.bender.demo.R;
+import me.alexrs.recyclerviewrenderers.renderers.ItemBenderRenderer;
+import me.alexrs.recyclerviewrenderers.renderers.ItemFryRenderer;
+import me.alexrs.recyclerviewrenderers.renderers.ItemZoidbergRenderer;
+import me.alexrs.recyclerviewrenderers.renderer.Renderer;
+import me.alexrs.recyclerviewrenderers.interfaces.RendererFactory;
 
 /**
  * @author Alejandro Rodriguez <alexrs95@gmail.com>

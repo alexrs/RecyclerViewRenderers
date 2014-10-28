@@ -1,36 +1,36 @@
-package me.alexrs.bender.lib.adapter;
+package me.alexrs.recyclerviewrenderers.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import java.util.List;
 
-import me.alexrs.bender.lib.renderer.Renderer;
-import me.alexrs.bender.lib.builder.RendererBuilder;
-import me.alexrs.bender.lib.interfaces.Renderable;
-import me.alexrs.bender.lib.interfaces.Builder;
-import me.alexrs.bender.lib.viewholder.RenderViewHolder;
+import me.alexrs.recyclerviewrenderers.builder.RendererBuilder;
+import me.alexrs.recyclerviewrenderers.interfaces.Builder;
+import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
+import me.alexrs.recyclerviewrenderers.renderer.Renderer;
+import me.alexrs.recyclerviewrenderers.viewholder.RenderViewHolder;
 
 /**
- * @author Alejandro Rodriguez <alexrs95@gmail.com>
+ * @author Alejandro Rodriguez <https://github.com/Alexrs95>
  */
 public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
 
     /**
-     * Adapter data
+     * List containing the renderables
      */
     private List<Renderable> data;
 
     /**
-     * Builder to instantiate the Benderer
+     * Builder to instantiate the Renderer
      */
     private Builder builder;
 
     /**
-     * Benderer to show
+     *
+     * @param data
+     * @param builder
      */
-    private Renderer renderer;
-
     public RendererAdapter(List<Renderable> data, RendererBuilder builder) {
         this.data = data;
         if (data == null) {
@@ -45,7 +45,7 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
 
     @Override
     public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        renderer = builder.instantiate(viewType).create();
+        Renderer renderer = builder.instantiate(viewType).create();
         return renderer.onCreateViewHolder(viewGroup, viewType);
     }
 
@@ -84,7 +84,7 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        return data.get(position).getBenderableId();
+        return data.get(position).getRenderableId();
     }
 
 }

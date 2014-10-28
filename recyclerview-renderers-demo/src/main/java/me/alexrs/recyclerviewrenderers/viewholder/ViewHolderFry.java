@@ -1,4 +1,4 @@
-package me.alexrs.bender.demo.viewholder;
+package me.alexrs.recyclerviewrenderers.viewholder;
 
 import android.view.View;
 import android.widget.Button;
@@ -8,8 +8,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import me.alexrs.bender.demo.R;
-import me.alexrs.bender.demo.items.ItemFry;
-import me.alexrs.bender.lib.viewholder.RenderViewHolder;
+import me.alexrs.recyclerviewrenderers.items.ItemFry;
 
 /**
  * @author Alejandro on 27/10/14.

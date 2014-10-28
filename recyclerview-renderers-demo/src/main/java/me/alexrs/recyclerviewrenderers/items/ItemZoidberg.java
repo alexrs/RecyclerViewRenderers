@@ -1,7 +1,7 @@
-package me.alexrs.bender.demo.items;
+package me.alexrs.recyclerviewrenderers.items;
 
 import me.alexrs.bender.demo.R;
-import me.alexrs.bender.lib.interfaces.Renderable;
+import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
 
 /**
  * @author Alejandro Rodriguez <alexrs95@gmail.com>
@@ -19,7 +19,7 @@ public class ItemZoidberg implements Renderable {
     }
 
     @Override
-    public int getBenderableId() {
+    public int getRenderableId() {
         return R.layout.item_zoidberg;
     }
 }

@@ -1,4 +1,4 @@
-package me.alexrs.bender.demo.activities;
+package me.alexrs.recyclerviewrenderers.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,14 +8,14 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import me.alexrs.bender.demo.Factory;
+import me.alexrs.recyclerviewrenderers.factory.Factory;
 import me.alexrs.bender.demo.R;
-import me.alexrs.bender.demo.items.ItemBender;
-import me.alexrs.bender.demo.items.ItemFry;
-import me.alexrs.bender.demo.items.ItemZoidberg;
-import me.alexrs.bender.lib.adapter.RendererAdapter;
-import me.alexrs.bender.lib.builder.RendererBuilder;
-import me.alexrs.bender.lib.interfaces.Renderable;
+import me.alexrs.recyclerviewrenderers.items.ItemBender;
+import me.alexrs.recyclerviewrenderers.items.ItemFry;
+import me.alexrs.recyclerviewrenderers.items.ItemZoidberg;
+import me.alexrs.recyclerviewrenderers.adapter.RendererAdapter;
+import me.alexrs.recyclerviewrenderers.builder.RendererBuilder;
+import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
 
 
 public class RenderersActivity extends Activity {

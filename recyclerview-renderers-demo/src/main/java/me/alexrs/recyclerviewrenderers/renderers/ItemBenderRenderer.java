@@ -1,12 +1,12 @@
-package me.alexrs.bender.demo.renderers;
+package me.alexrs.recyclerviewrenderers.renderers;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import me.alexrs.bender.demo.viewholder.ViewHolderBender;
-import me.alexrs.bender.lib.renderer.Renderer;
-import me.alexrs.bender.lib.viewholder.RenderViewHolder;
+import me.alexrs.recyclerviewrenderers.viewholder.ViewHolderBender;
+import me.alexrs.recyclerviewrenderers.renderer.Renderer;
+import me.alexrs.recyclerviewrenderers.viewholder.RenderViewHolder;
 
 /**
  * @author Alejandro Rodriguez <alexrs95@gmail.com>

@@ -1,9 +1,9 @@
-package me.alexrs.bender.lib.interfaces;
+package me.alexrs.recyclerviewrenderers.interfaces;
 
-import me.alexrs.bender.lib.renderer.Renderer;
+import me.alexrs.recyclerviewrenderers.renderer.Renderer;
 
 /**
- * @author Alejandro Rodriguez <alexrs95@gmail.com>
+ * @author Alejandro Rodriguez <https://github.com/Alexrs95>
  */
 public interface RendererFactory {
 

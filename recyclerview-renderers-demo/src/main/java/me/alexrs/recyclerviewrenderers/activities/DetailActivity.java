@@ -1,4 +1,4 @@
-package me.alexrs.bender.demo.activities;
+package me.alexrs.recyclerviewrenderers.activities;
 
 import android.app.Activity;
 import android.os.Bundle;

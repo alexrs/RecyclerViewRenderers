@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.alexrs.bender.demo" >
+    package="me.alexrs.recyclerviewrenderers.demo" >
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".activities.RenderersActivity"
+            android:name="me.alexrs.recyclerviewrenderers.activities.RenderersActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.DetailActivity"
+            android:name="me.alexrs.recyclerviewrenderers.activities.DetailActivity"
             android:label="@string/title_activity_detail" >
         </activity>
     </application>
