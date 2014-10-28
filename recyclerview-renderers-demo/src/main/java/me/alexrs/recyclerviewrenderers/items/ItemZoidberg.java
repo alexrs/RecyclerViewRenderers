@@ -1,6 +1,6 @@
 package me.alexrs.recyclerviewrenderers.items;
 
-import me.alexrs.bender.demo.R;
+import me.alexrs.recyclerviewrenderers.demo.R;
 import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
 
 /**

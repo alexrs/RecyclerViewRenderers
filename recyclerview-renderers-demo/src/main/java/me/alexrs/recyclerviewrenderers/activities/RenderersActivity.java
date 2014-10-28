@@ -8,8 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.alexrs.recyclerviewrenderers.demo.R;
 import me.alexrs.recyclerviewrenderers.factory.Factory;
-import me.alexrs.bender.demo.R;
 import me.alexrs.recyclerviewrenderers.items.ItemBender;
 import me.alexrs.recyclerviewrenderers.items.ItemFry;
 import me.alexrs.recyclerviewrenderers.items.ItemZoidberg;

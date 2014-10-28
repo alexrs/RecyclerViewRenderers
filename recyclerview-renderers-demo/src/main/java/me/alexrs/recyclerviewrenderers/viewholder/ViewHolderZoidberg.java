@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import me.alexrs.bender.demo.R;
+import me.alexrs.recyclerviewrenderers.demo.R;
 import me.alexrs.recyclerviewrenderers.items.ItemZoidberg;
 
 /**
