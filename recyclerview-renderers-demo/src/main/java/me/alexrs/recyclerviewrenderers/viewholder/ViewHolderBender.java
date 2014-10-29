@@ -39,8 +39,8 @@ public class ViewHolderBender extends RenderViewHolder<ItemBender> {
     }
 
     @Override
-    public void onBindView(ItemBender benderable) {
-        title.setText(benderable.getTitle());
-        summary.setText(benderable.getSummary());
+    public void onBindView(ItemBender renderable) {
+        title.setText(renderable.getTitle());
+        summary.setText(renderable.getSummary());
     }
 }
