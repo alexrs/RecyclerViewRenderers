@@ -125,6 +125,11 @@ public class ViewHolderBender extends RenderViewHolder<ItemBender> {
     }
 }
 ```
+####TODO
+* Improve README
+* Test
+* Upload to Maven Central
+
 
 License
 -------
