@@ -8,16 +8,18 @@ import me.alexrs.recyclerviewrenderers.renderer.Renderer;
 
 /**
  * @author Alejandro Rodrigiez <https://github.com/Alexrs95>
+ *         <p/>
+ *         Builder that return the Renderer to display
  */
 public class RendererBuilder implements Builder {
 
     /**
-     *
+     * Factory that provide the Renderer
      */
     private RendererFactory factory;
 
     /**
-     *
+     * id of the layout
      */
     @LayoutRes
     private int id;
@@ -28,7 +30,7 @@ public class RendererBuilder implements Builder {
 
     @Override
     public Renderer create() {
-        return factory.getBenderRenderer(id);
+        return factory.getRenderer(id);
     }
 
     @Override

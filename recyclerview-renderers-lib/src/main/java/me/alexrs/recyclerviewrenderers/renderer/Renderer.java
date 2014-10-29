@@ -11,7 +11,7 @@ import me.alexrs.recyclerviewrenderers.viewholder.RenderViewHolder;
 public abstract class Renderer {
 
     /**
-     *
+     * layout ID
      */
     @LayoutRes
     public final int id;
@@ -21,7 +21,7 @@ public abstract class Renderer {
     }
 
     /**
-     * Creates the ViewHolder of the Benderer
+     * Creates the ViewHolder of the Renderer
      *
      * @param viewGroup the container
      * @return an instance of the ViewHolder

@@ -13,7 +13,7 @@ import me.alexrs.recyclerviewrenderers.renderers.ItemZoidbergRenderer;
 public class Factory implements RendererFactory {
 
     @Override
-    public Renderer getBenderRenderer(int id) {
+    public Renderer getRenderer(int id) {
         switch (id) {
             case R.layout.item_bender:
                 return new ItemBenderRenderer(id);

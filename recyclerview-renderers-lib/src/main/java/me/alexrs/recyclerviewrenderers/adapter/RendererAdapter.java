@@ -13,6 +13,11 @@ import me.alexrs.recyclerviewrenderers.viewholder.RenderViewHolder;
 
 /**
  * @author Alejandro Rodriguez <https://github.com/Alexrs95>
+ *         <p/>
+ *         Adapter created to manage the Renderers. This is the main class of this library.
+ *         The main objective of this class is to avoid creating new adapters for each type of data
+ *         we want to show in our RecyclerViews. Also, this adapter allows to display different
+ *         elements with different data that exexute different actions.
  */
 public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
 
@@ -27,9 +32,8 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
     private Builder builder;
 
     /**
-     *
-     * @param data
-     * @param builder
+     * @param data    List that contains the data to show
+     * @param builder Builder that create the Renderers
      */
     public RendererAdapter(List<Renderable> data, RendererBuilder builder) {
         this.data = data;
@@ -42,6 +46,7 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
             throw new IllegalArgumentException("Builder must not be null");
         }
     }
+
 
     @Override
     public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
