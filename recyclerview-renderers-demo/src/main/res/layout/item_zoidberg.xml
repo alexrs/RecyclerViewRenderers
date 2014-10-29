@@ -2,22 +2,22 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@android:color/holo_blue_light"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="10dp">
 
     <ImageView
-        android:src="@drawable/ic_launcher"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView" />
+        android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:textSize="40sp"
-        android:textAllCaps="true"
-        android:text="text"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/textView" />
+        android:text="text"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 </LinearLayout>
