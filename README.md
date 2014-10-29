@@ -6,7 +6,7 @@ RecyclerViewRenderers
 Creating adapters each time you want to use a RecyclerView is boring. Everybody know it.
 Also, creating an adapter that accept different types of data, with its corresponding views, and manage them generates adapters with lines and lines of code that are difficult to maintain.
 
-RecyclerViewRenderes is a library which main objective is to reduce the time you spend fighting against RecyclerView.
+RecyclerViewRenderers is a library which main objective is to reduce the time you spend fighting against RecyclerView.
 
 It has been designed to help you to have your code separated and decoupled.
 
@@ -23,17 +23,16 @@ First, we have to declare a RecyclerView in our layout:
 Then, in our Activity or Fragment:
 ```JAVA
 RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-```
-If we are going to have different items, we have to indicate it:
-```JAVA
+
+//If we are going to have different items, we have to indicate it
 recyclerView.setHasFixedSize(false);
-```
-```JAVA
+
+//LayoutManager
 LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 recyclerView.setLayoutManager(layoutManager);
-```
-```JAVA
+
+//Adapter
 RendererAdapter adapter = new RendererAdapter(items, new RendererBuilder(new Factory()));
 recyclerView.setAdapter(adapter);
 ```
