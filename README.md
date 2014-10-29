@@ -1,6 +1,8 @@
 RecyclerViewRenderers
 =====================
 
+![image](art/Screenshot.png)
+
 Creating adapters each time you want to use a RecyclerView is boring. Everybody know it.
 Also, creating an adapter that accept different types of data, with its corresponding views, and manage them generates adapters with lines and lines of code and that are difficult to maintain.
 
