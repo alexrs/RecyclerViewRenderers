@@ -3,12 +3,12 @@ RecyclerViewRenderers
 
 ![image](art/Screenshot.png)
 
-Creating adapters each time you want to use a RecyclerView is boring. Everybody know it.
-Also, creating an adapter that accept different types of data, with its corresponding views, and manage them generates adapters with lines and lines of code that are difficult to maintain.
+Creating adapters each time you want to use a RecyclerView is boring. Everybody knows it.
+Also, creating an adapter that accepts different types of data, with its corresponding views, and manage them generates adapters with lines and lines of code that are difficult to maintain.
 
-RecyclerViewRenderers is a library which main objective is to reduce the time you spend fighting against RecyclerView.
+RecyclerViewRenderers is a library whose main objective is to reduce the time you spend fighting against RecyclerView.
 
-It has been designed to help you to have your code separated and decoupled.
+It has been designed to help you have your code separated and decoupled.
 
 Thanks to [Sefford](https://github.com/Sefford) for his great library [Brender](https://github.com/Sefford/brender), that has inspired me to write this one.
 
