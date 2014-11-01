@@ -32,7 +32,7 @@ LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 recyclerView.setLayoutManager(layoutManager);
 
-//Adapter (Where maging happens!)
+//Adapter (Where magic happens!)
 RendererAdapter adapter = new RendererAdapter(items, new RendererBuilder(new Factory()));
 recyclerView.setAdapter(adapter);
 ```
