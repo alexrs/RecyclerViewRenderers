@@ -68,8 +68,8 @@ public class ItemBender implements Renderable {
 ```
 ####ViewHolder
 
-The `ViewHolder` patterns was used in ListViews to recycle the views and reduce the usage of `findViewById`. In the new `RecyclerView` the `ViewHolder` is used to indicate the `Adapter` how to set the data to the views.
-Also, you can use [ButterKnife](https://github.com/JakeWharton/butterknife)!  
+The `ViewHolder` pattern was used in ListViews to recycle the views and reduce the usage of `findViewById`. In the new `RecyclerView` the `ViewHolder` is used to indicate the `Adapter` how to set the data to the views.
+You can also use [ButterKnife](https://github.com/JakeWharton/butterknife)!  
 
 ```JAVA
 public class ViewHolderBender extends RenderViewHolder<ItemBender> {
@@ -93,8 +93,8 @@ public class ViewHolderBender extends RenderViewHolder<ItemBender> {
 ```
 
 ####Renderer
-The `Renderer` is the class responsible for create the `ViewHolder` of each `Renderable`. The method `onCreateViewHolder` should return the `ViewHolder`.
-Also, here you can indicate the action that should be performed when this item is clicked in the `RecyclerView`.
+The `Renderer` is the class responsible for creating the `ViewHolder` of each `Renderable`. The method `onCreateViewHolder` should return the `ViewHolder`.
+You can also indicate here the action that should be performed when this item is clicked in the `RecyclerView`.
 
 ```JAVA
 public class ItemBenderRenderer extends Renderer implements View.OnClickListener {
@@ -120,7 +120,7 @@ public class ItemBenderRenderer extends Renderer implements View.OnClickListener
 ```
 
 ####Factory
-You have to create a class that implements `RendererFactory`. The method `getRenderer` will be impelented. It will receive as parameter the id of the layout returned by `getRenderableId` in your `Renderable`.  
+You have to create a class that implements `RendererFactory`. The method `getRenderer` will be implemented. It will receive as parameter the id of the layout returned by `getRenderableId` in your `Renderable`.  
 
 ```JAVA
 public class Factory implements RendererFactory {
