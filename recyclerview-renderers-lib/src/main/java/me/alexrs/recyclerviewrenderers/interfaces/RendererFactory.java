@@ -15,8 +15,6 @@
  */
 package me.alexrs.recyclerviewrenderers.interfaces;
 
-import android.support.annotation.LayoutRes;
-
 import me.alexrs.recyclerviewrenderers.renderer.Renderer;
 
 /**
@@ -26,9 +24,9 @@ import me.alexrs.recyclerviewrenderers.renderer.Renderer;
  */
 public interface RendererFactory {
 
-    /**
-     * @param id the ID of the layout
-     * @return the Renderer assigned to the layout
-     */
-    Renderer getRenderer(@LayoutRes int id);
+  /**
+   * @param id the ID of the layout
+   * @return the Renderer assigned to the layout
+   */
+  Renderer getRenderer(int id);
 }

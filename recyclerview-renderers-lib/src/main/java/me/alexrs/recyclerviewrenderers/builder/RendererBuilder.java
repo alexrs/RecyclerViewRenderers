@@ -15,8 +15,6 @@
  */
 package me.alexrs.recyclerviewrenderers.builder;
 
-import android.support.annotation.LayoutRes;
-
 import me.alexrs.recyclerviewrenderers.interfaces.Builder;
 import me.alexrs.recyclerviewrenderers.interfaces.RendererFactory;
 import me.alexrs.recyclerviewrenderers.renderer.Renderer;
@@ -28,30 +26,28 @@ import me.alexrs.recyclerviewrenderers.renderer.Renderer;
  */
 public class RendererBuilder implements Builder {
 
-    /**
-     * Factory that provide the Renderer
-     */
-    private RendererFactory factory;
+  /**
+   * Factory that provide the Renderer
+   */
+  private RendererFactory factory;
 
-    /**
-     * id of the layout
-     */
-    @LayoutRes
-    private int id;
+  /**
+   * id of the layout
+   */
+  private int id;
 
-    public RendererBuilder(RendererFactory factory) {
-        this.factory = factory;
-    }
+  public RendererBuilder(RendererFactory factory) {
+    this.factory = factory;
+  }
 
-    @Override
-    public Renderer create() {
-        return factory.getRenderer(id);
-    }
+  @Override
+  public Renderer create() {
+    return factory.getRenderer(id);
+  }
 
-    @Override
-    public Builder instantiate(@LayoutRes int id) {
-        this.id = id;
-        return this;
-    }
-
+  @Override
+  public Builder instantiate(int id) {
+    this.id = id;
+    return this;
+  }
 }

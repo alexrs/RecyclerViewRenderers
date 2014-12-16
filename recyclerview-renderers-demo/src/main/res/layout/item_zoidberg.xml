@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zoidberg_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?android:attr/selectableItemBackground"
@@ -11,15 +12,15 @@
         android:id="@+id/imageView"
         android:layout_width="119dp"
         android:layout_height="186dp"
-        android:src="@drawable/zoidberg"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/zoidberg" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:text="text"
         android:textAllCaps="true"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_gravity="center_vertical" />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 </LinearLayout>

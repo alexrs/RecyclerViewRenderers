@@ -15,8 +15,6 @@
  */
 package me.alexrs.recyclerviewrenderers.interfaces;
 
-import android.support.annotation.LayoutRes;
-
 /**
  * @author Alejandro Rodriguez <https://github.com/Alexrs95>
  *         <p/>
@@ -24,9 +22,8 @@ import android.support.annotation.LayoutRes;
  */
 public interface Renderable {
 
-    /**
-     * @return the ID of the Layout to inflate
-     */
-    @LayoutRes
-    int getRenderableId();
+  /**
+   * @return the ID of the Layout to inflate
+   */
+  int getRenderableId();
 }

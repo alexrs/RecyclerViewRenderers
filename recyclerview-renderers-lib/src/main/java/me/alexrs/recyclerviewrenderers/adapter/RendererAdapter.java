@@ -17,9 +17,7 @@ package me.alexrs.recyclerviewrenderers.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
-
 import java.util.List;
-
 import me.alexrs.recyclerviewrenderers.builder.RendererBuilder;
 import me.alexrs.recyclerviewrenderers.interfaces.Builder;
 import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
@@ -36,75 +34,84 @@ import me.alexrs.recyclerviewrenderers.viewholder.RenderViewHolder;
  */
 public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
 
-    /**
-     * List containing the renderables
-     */
-    private List<Renderable> data;
+  /**
+   * List containing the renderables
+   */
+  private List<Renderable> items;
 
-    /**
-     * Builder to instantiate the Renderer
-     */
-    private Builder builder;
+  /**
+   * Builder to instantiate the Renderer
+   */
+  private Builder builder;
 
-    /**
-     * @param data    List that contains the data to show
-     * @param builder Builder that create the Renderers
-     */
-    public RendererAdapter(List<Renderable> data, RendererBuilder builder) {
-        this.data = data;
-        if (data == null) {
-            throw new IllegalArgumentException("Data must not be null");
-        }
-
-        this.builder = builder;
-        if (builder == null) {
-            throw new IllegalArgumentException("Builder must not be null");
-        }
+  /**
+   * @param items List that contains the items to show
+   * @param builder Builder that create the Renderers
+   */
+  public RendererAdapter(List<Renderable> items, RendererBuilder builder) {
+    this.items = items;
+    if (items == null) {
+      throw new IllegalArgumentException("Data must not be null");
     }
 
-
-    @Override
-    public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        Renderer renderer = builder.instantiate(viewType).create();
-        return renderer.onCreateViewHolder(viewGroup, viewType);
+    this.builder = builder;
+    if (builder == null) {
+      throw new IllegalArgumentException("Builder must not be null");
     }
+  }
 
-    @Override
-    public void onBindViewHolder(RenderViewHolder holder, int position) {
-        holder.onBindView(data.get(position));
-    }
+  @Override
+  public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    Renderer renderer = builder.instantiate(viewType).create();
+    return renderer.onCreateViewHolder(viewGroup, viewType);
+  }
 
-    @Override
-    public long getItemId(int position) {
-        return super.getItemId(position);
-    }
+  @Override
+  public void onBindViewHolder(RenderViewHolder holder, int position) {
+    holder.onBindView(items.get(position));
+  }
 
-    @Override
-    public void onViewRecycled(RenderViewHolder holder) {
-        super.onViewRecycled(holder);
-        holder.onViewRecycled();
-    }
+  @Override
+  public long getItemId(int position) {
+    return super.getItemId(position);
+  }
 
-    @Override
-    public void onViewAttachedToWindow(RenderViewHolder holder) {
-        super.onViewAttachedToWindow(holder);
-        holder.onViewAttachedToWindow();
-    }
+  @Override
+  public void onViewRecycled(RenderViewHolder holder) {
+    super.onViewRecycled(holder);
+    holder.onViewRecycled();
+  }
 
-    @Override
-    public void onViewDetachedFromWindow(RenderViewHolder holder) {
-        super.onViewDetachedFromWindow(holder);
-        holder.onViewDetachedFromWindow();
-    }
+  @Override
+  public void onViewAttachedToWindow(RenderViewHolder holder) {
+    super.onViewAttachedToWindow(holder);
+    holder.onViewAttachedToWindow();
+  }
 
-    @Override
-    public int getItemCount() {
-        return data.size();
-    }
+  @Override
+  public void onViewDetachedFromWindow(RenderViewHolder holder) {
+    super.onViewDetachedFromWindow(holder);
+    holder.onViewDetachedFromWindow();
+  }
 
-    @Override
-    public int getItemViewType(int position) {
-        return data.get(position).getRenderableId();
-    }
+  @Override
+  public int getItemCount() {
+    return items.size();
+  }
 
+  @Override
+  public int getItemViewType(int position) {
+    return items.get(position).getRenderableId();
+  }
+
+  public void add(Renderable item, int position) {
+    items.add(position, item);
+    notifyItemInserted(position);
+  }
+
+  public void remove(Renderable item) {
+    int position = items.indexOf(item);
+    items.remove(position);
+    notifyItemRemoved(position);
+  }
 }

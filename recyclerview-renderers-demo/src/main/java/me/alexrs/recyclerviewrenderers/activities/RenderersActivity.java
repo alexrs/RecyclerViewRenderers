@@ -20,10 +20,12 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
+import android.view.Menu;
+import android.view.MenuItem;
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 import java.util.ArrayList;
 import java.util.List;
-
 import me.alexrs.recyclerviewrenderers.adapter.RendererAdapter;
 import me.alexrs.recyclerviewrenderers.builder.RendererBuilder;
 import me.alexrs.recyclerviewrenderers.decorator.DividerItemDecoration;
@@ -34,46 +36,63 @@ import me.alexrs.recyclerviewrenderers.items.ItemBender;
 import me.alexrs.recyclerviewrenderers.items.ItemFry;
 import me.alexrs.recyclerviewrenderers.items.ItemZoidberg;
 
-
 /**
  * @author Alejandro Rodriguez <https://github.com/Alexrs95>
  */
 public class RenderersActivity extends Activity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.a_bender);
+  @InjectView(R.id.recyclerView) RecyclerView recyclerView;
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(false);
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+  private RendererAdapter adapter;
 
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.render, menu);
+    return true;
+  }
 
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
-
-        RendererAdapter adapter = new RendererAdapter(createItems(), new RendererBuilder(new Factory()));
-        recyclerView.setAdapter(adapter);
-
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.menu_add:
+        adapter.add(new ItemFry(), 0);
+        recyclerView.scrollToPosition(0);
+        return true;
     }
+    return false;
+  }
 
-    private List<Renderable> createItems() {
-        List<Renderable> items = new ArrayList<Renderable>();
-        for (int i = 0; i < 100; i++) {
-            items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
-            items.add(new ItemZoidberg("Dr. Zoidberg: Hooray!"));
-            items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
-            items.add(new ItemFry());
-            items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
-            items.add(new ItemZoidberg("Dr. Zoidberg: Hooray!"));
-            items.add(new ItemFry());
-            items.add(new ItemZoidberg("Dr. Zoidberg: Hooray!"));
-        }
-        return items;
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.a_bender);
+    ButterKnife.inject(this);
+
+    recyclerView.setHasFixedSize(false);
+    recyclerView.addItemDecoration(
+        new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+    recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+    LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+    layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+    recyclerView.setLayoutManager(layoutManager);
+
+    adapter = new RendererAdapter(createItems(), new RendererBuilder(new Factory()));
+    recyclerView.setAdapter(adapter);
+  }
+
+  private List<Renderable> createItems() {
+    List<Renderable> items = new ArrayList<Renderable>();
+    for (int i = 0; i < 100; i++) {
+      items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
+      items.add(new ItemZoidberg("Dr. Zoidberg: Hooray!"));
+      items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
+      items.add(new ItemFry());
+      items.add(new ItemBender("Fry: I've got no home, no family...", "Bender: No friends."));
+      items.add(new ItemZoidberg("Dr. Zoidberg: Hooray!"));
+      items.add(new ItemFry());
+      items.add(new ItemZoidberg("Dr. Zoidberg: Hooray!"));
     }
-
+    return items;
+  }
 }

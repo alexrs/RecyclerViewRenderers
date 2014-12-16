@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BenderActivity" >
+    <item android:id="@+id/menu_add"
+        android:title="Add"
+        android:showAsAction="always" />
+</menu>
