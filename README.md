@@ -147,8 +147,6 @@ public class Factory implements RendererFactory {
 ```
 ####TODO
 * Test
-* Upload to Maven Central
-
 
 License
 -------
