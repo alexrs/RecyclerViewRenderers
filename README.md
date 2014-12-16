@@ -13,6 +13,11 @@ It has been designed to help you have your code separated and decoupled.
 
 Thanks to [Sefford](https://github.com/Sefford) for his great library [Brender](https://github.com/Sefford/brender), that has inspired me to write this one.
 
+####Download
+```GROOVY
+compile 'me.alexrs:recyclerview-renderers:1.0.0'
+```
+
 ##Usage
 First, we have to declare a RecyclerView in the layout:
 ```XML
