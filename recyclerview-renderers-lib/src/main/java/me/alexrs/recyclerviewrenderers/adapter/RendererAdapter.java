@@ -48,8 +48,8 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
    * @param items List that contains the items to show
    * @param builder Builder that create the Renderers
    */
-  public RendererAdapter(List<Renderable> items, RendererBuilder builder) {
-    this.items = items;
+  public RendererAdapter(List<? extends Renderable> items, RendererBuilder builder) {
+    this.items = (List<Renderable>) items;
     if (items == null) {
       throw new IllegalArgumentException("Data must not be null");
     }
@@ -109,9 +109,8 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
     notifyItemInserted(position);
   }
 
-  public void remove(Renderable item) {
-    int position = items.indexOf(item);
-    items.remove(position);
-    notifyItemRemoved(position);
+  public void clear() {
+    items.clear();
+    notifyDataSetChanged();
   }
 }
