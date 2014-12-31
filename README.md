@@ -75,10 +75,10 @@ public class ItemBender implements Renderable {
 ####ViewHolder
 
 The `ViewHolder` pattern was used in ListViews to recycle the views and reduce the usage of `findViewById`. In the new `RecyclerView` the `ViewHolder` is used to indicate the `Adapter` how to set the data to the views.
-You can also use [ButterKnife](https://github.com/JakeWharton/butterknife)!  
+You can indicate here the action that should be performed when this item is clicked in the `RecyclerView` and you can also use [ButterKnife](https://github.com/JakeWharton/butterknife)!  
 
 ```JAVA
-public class ViewHolderBender extends RenderViewHolder<ItemBender> {
+public class ViewHolderBender extends RenderViewHolder<ItemBender> implements View.OnClickListener{
 
     @InjectView(R.id.title)
     TextView title;
@@ -88,6 +88,7 @@ public class ViewHolderBender extends RenderViewHolder<ItemBender> {
     public ViewHolderBender(View itemView) {
         super(itemView);
         ButterKnife.inject(this, itemView);
+        itemView.setOnClickListener(this);
     }
 
     @Override
@@ -95,15 +96,21 @@ public class ViewHolderBender extends RenderViewHolder<ItemBender> {
         title.setText(renderable.getTitle());
         summary.setText(renderable.getSummary());
     }
+    
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(getContext(), OtherClass.class);
+        getContext().startActivity(intent);
+    }
+
 }
 ```
 
 ####Renderer
 The `Renderer` is the class responsible for creating the `ViewHolder` of each `Renderable`. The method `onCreateViewHolder` should return the `ViewHolder`.
-You can also indicate here the action that should be performed when this item is clicked in the `RecyclerView`.
 
 ```JAVA
-public class ItemBenderRenderer extends Renderer implements View.OnClickListener {
+public class ItemBenderRenderer extends Renderer {
 
 
     public ItemBenderRenderer(int id) {
@@ -116,11 +123,6 @@ public class ItemBenderRenderer extends Renderer implements View.OnClickListener
                 .inflate(id, viewGroup, false);
         itemView.setOnClickListener(this);
         return new ViewHolderBender(itemView);
-    }
-
-    @Override
-    public void onClick(View v) {
-        v.getContext().startActivity(new Intent(v.getContext(), DetailActivity.class));
     }
 }
 ```
