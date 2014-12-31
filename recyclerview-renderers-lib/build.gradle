@@ -29,7 +29,7 @@ publish {
   userOrg = 'alexrs95'
   groupId = 'me.alexrs'
   artifactId = 'recyclerview-renderers'
-  version = '1.0.1'
+  version = '1.0.2'
   description = 'RecyclerView made easy'
   website = 'https://github.com/Alexrs95/RecyclerViewRenderers'
 }

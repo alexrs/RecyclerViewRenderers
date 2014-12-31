@@ -15,6 +15,7 @@
  */
 package me.alexrs.recyclerviewrenderers.viewholder;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
@@ -25,11 +26,15 @@ import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
  */
 public abstract class RenderViewHolder<R extends Renderable> extends RecyclerView.ViewHolder {
 
+  private final Context context;
+  private R item;
+
   public RenderViewHolder(View itemView) {
     super(itemView);
+    this.context = itemView.getContext();
   }
 
-  public abstract void onBindView(R renderable);
+  public abstract void onBindView(R item);
 
   public void onViewRecycled() {
   }
@@ -38,5 +43,17 @@ public abstract class RenderViewHolder<R extends Renderable> extends RecyclerVie
   }
 
   public void onViewDetachedFromWindow() {
+  }
+
+  public Context getContext() {
+    return context;
+  }
+
+  public void setItem(R item) {
+    this.item = item;
+  }
+
+  public R getItem() {
+    return item;
   }
 }

@@ -69,6 +69,7 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
   @Override
   public void onBindViewHolder(RenderViewHolder holder, int position) {
     holder.onBindView(items.get(position));
+    holder.setItem(items.get(position));
   }
 
   @Override
