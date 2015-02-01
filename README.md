@@ -15,7 +15,7 @@ Thanks to [Sefford](https://github.com/Sefford) for his great library [Brender](
 
 ####Download
 ```GROOVY
-compile 'me.alexrs:recyclerview-renderers:1.0.0'
+compile 'me.alexrs:recyclerview-renderers:1.0.3'
 ```
 
 ##Usage
