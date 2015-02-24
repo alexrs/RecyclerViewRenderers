@@ -78,7 +78,7 @@ The `ViewHolder` pattern was used in ListViews to recycle the views and reduce t
 You can indicate here the action that should be performed when this item is clicked in the `RecyclerView` and you can also use [ButterKnife](https://github.com/JakeWharton/butterknife)!  
 
 ```JAVA
-public class ViewHolderBender extends RenderViewHolder<ItemBender> {
+public class ViewHolderBender extends RenderViewHolder<ItemBender> implements View.OnClickListener {
 
     @InjectView(R.id.title)
     TextView title;
@@ -121,7 +121,6 @@ public class ItemBenderRenderer extends Renderer {
     public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int id) {
         View itemView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(id, viewGroup, false);
-        itemView.setOnClickListener(this);
         return new ViewHolderBender(itemView);
     }
 }
