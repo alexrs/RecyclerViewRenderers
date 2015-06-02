@@ -16,8 +16,6 @@
 package me.alexrs.recyclerviewrenderers.viewholder;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -39,7 +37,7 @@ public class ViewHolderFry extends RenderViewHolder<ItemFry> {
 
     @OnClick(R.id.button)
     public void performClick(View view) {
-        Toast.makeText(view.getContext(), "BUTTON", Toast.LENGTH_SHORT).show();
+        getItem().getItemListener().onClick(getAdapterPosition());
     }
 
     @Override
