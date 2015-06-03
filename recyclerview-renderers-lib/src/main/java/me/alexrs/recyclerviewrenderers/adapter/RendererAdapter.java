@@ -115,6 +115,11 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
     notifyItemRemoved(position);
   }
 
+  public void update(List<Renderable> items) {
+    this.items = items;
+    notifyDataSetChanged();
+  }
+
   public void clear() {
     items.clear();
     notifyDataSetChanged();
