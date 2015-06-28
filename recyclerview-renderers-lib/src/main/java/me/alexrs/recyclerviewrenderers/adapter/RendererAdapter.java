@@ -25,8 +25,8 @@ import me.alexrs.recyclerviewrenderers.renderer.Renderer;
 import me.alexrs.recyclerviewrenderers.viewholder.RenderViewHolder;
 
 /**
- * @author Alejandro Rodriguez <https://github.com/Alexrs95>
- *         <p/>
+ * @author Alejandro Rodriguez (https://github.com/Alexrs95)
+ *
  *         Adapter created to manage the Renderers. This is the main class of this library.
  *         The main objective of this class is to avoid creating new adapters for each type of data
  *         we want to show in our RecyclerViews. Also, this adapter allows to display different

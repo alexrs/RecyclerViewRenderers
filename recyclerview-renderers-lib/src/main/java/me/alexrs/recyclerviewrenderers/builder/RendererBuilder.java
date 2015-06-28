@@ -20,8 +20,8 @@ import me.alexrs.recyclerviewrenderers.interfaces.RendererFactory;
 import me.alexrs.recyclerviewrenderers.renderer.Renderer;
 
 /**
- * @author Alejandro Rodrigiez <https://github.com/Alexrs95>
- *         <p/>
+ * @author Alejandro Rodrigiez (https://github.com/Alexrs95)
+ *
  *         Builder that return the Renderer to display
  */
 public class RendererBuilder implements Builder {

@@ -22,7 +22,7 @@ import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
 
 /**
  * @param <R> Renderable that will be received in #onBindViewHolder
- * @author Alejandro Rodriguez <https://github.com/Alexrs95>
+ * @author Alejandro Rodriguez (https://github.com/Alexrs95)
  */
 public abstract class RenderViewHolder<R extends Renderable> extends RecyclerView.ViewHolder {
 

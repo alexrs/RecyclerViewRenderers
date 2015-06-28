@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 import me.alexrs.recyclerviewrenderers.viewholder.RenderViewHolder;
 
 /**
- * @author Alejandro Rodriguez <https://github.com/Alexrs95>
+ * @author Alejandro Rodriguez (https://github.com/Alexrs95)
  */
 public abstract class Renderer {
 
