@@ -17,14 +17,28 @@ package me.alexrs.recyclerviewrenderers.items;
 
 import me.alexrs.recyclerviewrenderers.demo.R;
 import me.alexrs.recyclerviewrenderers.interfaces.Renderable;
+import me.alexrs.recyclerviewrenderers.listeners.ItemListener;
 
 /**
  * @author Alejandro Rodriguez <https://github.com/Alexrs95>
  */
 public class ItemFry implements Renderable {
+    private ItemListener itemListener;
+
+    public ItemFry(ItemListener itemListener) {
+        this.itemListener = itemListener;
+    }
 
     @Override
     public int getRenderableId() {
         return R.layout.item_fry;
+    }
+
+    public ItemListener getItemListener() {
+        return itemListener;
+    }
+
+    public void setItemListener(ItemListener itemListener) {
+        this.itemListener = itemListener;
     }
 }
