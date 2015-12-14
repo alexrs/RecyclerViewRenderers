@@ -37,7 +37,7 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
   /**
    * List containing the renderables
    */
-  private List<Renderable> items;
+  public List<Renderable> items;
 
   /**
    * Builder to instantiate the Renderer
@@ -60,49 +60,41 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
     }
   }
 
-  @Override
-  public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+  @Override public RenderViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
     Renderer renderer = builder.instantiate(viewType).create();
     return renderer.onCreateViewHolder(viewGroup, viewType);
   }
 
-  @Override
-  public void onBindViewHolder(RenderViewHolder holder, int position) {
+  @Override public void onBindViewHolder(RenderViewHolder holder, int position) {
     holder.onBindView(items.get(position));
     holder.setItem(items.get(position));
   }
 
-  @Override
-  public long getItemId(int position) {
+  @Override public int getItemViewType(int position) {
+    return items.get(position).getRenderableId();
+  }
+
+  @Override public long getItemId(int position) {
     return super.getItemId(position);
   }
 
-  @Override
-  public void onViewRecycled(RenderViewHolder holder) {
+  @Override public int getItemCount() {
+    return items.size();
+  }
+
+  @Override public void onViewRecycled(RenderViewHolder holder) {
     super.onViewRecycled(holder);
     holder.onViewRecycled();
   }
 
-  @Override
-  public void onViewAttachedToWindow(RenderViewHolder holder) {
+  @Override public void onViewAttachedToWindow(RenderViewHolder holder) {
     super.onViewAttachedToWindow(holder);
     holder.onViewAttachedToWindow();
   }
 
-  @Override
-  public void onViewDetachedFromWindow(RenderViewHolder holder) {
+  @Override public void onViewDetachedFromWindow(RenderViewHolder holder) {
     super.onViewDetachedFromWindow(holder);
     holder.onViewDetachedFromWindow();
-  }
-
-  @Override
-  public int getItemCount() {
-    return items.size();
-  }
-
-  @Override
-  public int getItemViewType(int position) {
-    return items.get(position).getRenderableId();
   }
 
   public void add(Renderable item, int position) {
