@@ -37,7 +37,7 @@ public class RendererAdapter extends RecyclerView.Adapter<RenderViewHolder> {
   /**
    * List containing the renderables
    */
-  public List<Renderable> items;
+  protected List<Renderable> items;
 
   /**
    * Builder to instantiate the Renderer
