@@ -18,8 +18,8 @@ package me.alexrs.recyclerviewrenderers.viewholder;
 import android.view.View;
 import android.widget.TextView;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import me.alexrs.recyclerviewrenderers.demo.R;
 import me.alexrs.recyclerviewrenderers.items.ItemBender;
 
@@ -28,14 +28,14 @@ import me.alexrs.recyclerviewrenderers.items.ItemBender;
  */
 public class ViewHolderBender extends RenderViewHolder<ItemBender> {
 
-    @InjectView(R.id.title)
+    @Bind(R.id.title)
     TextView title;
-    @InjectView(R.id.summary)
+    @Bind(R.id.summary)
     TextView summary;
 
     public ViewHolderBender(View itemView) {
         super(itemView);
-        ButterKnife.inject(this, itemView);
+        ButterKnife.bind(this, itemView);
     }
 
     @Override

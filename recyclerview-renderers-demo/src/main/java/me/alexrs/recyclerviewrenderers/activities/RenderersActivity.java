@@ -26,8 +26,8 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import me.alexrs.recyclerviewrenderers.adapter.RendererAdapter;
 import me.alexrs.recyclerviewrenderers.adapters.CustomRendererAdapter;
 import me.alexrs.recyclerviewrenderers.builder.RendererBuilder;
@@ -45,7 +45,7 @@ import me.alexrs.recyclerviewrenderers.listeners.ItemListener;
  */
 public class RenderersActivity extends Activity implements ItemListener {
 
-    @InjectView(R.id.recyclerView)
+    @Bind(R.id.recyclerView)
     RecyclerView recyclerView;
 
     private RendererAdapter adapter;
@@ -54,7 +54,7 @@ public class RenderersActivity extends Activity implements ItemListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a_bender);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         recyclerView.setHasFixedSize(false);
         recyclerView.addItemDecoration(

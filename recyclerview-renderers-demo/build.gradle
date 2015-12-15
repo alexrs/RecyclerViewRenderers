@@ -18,5 +18,5 @@ dependencies {
     compile project(":recyclerview-renderers-lib")
     compile 'com.android.support:support-v4:23.+'
     compile 'com.android.support:recyclerview-v7:23.+'
-    compile 'com.jakewharton:butterknife:5.+'
+    compile 'com.jakewharton:butterknife:7.+'
 }

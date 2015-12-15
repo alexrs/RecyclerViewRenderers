@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 package me.alexrs.recyclerviewrenderers.viewholder;
+
 import android.view.View;
-import android.widget.Button;
+
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import me.alexrs.recyclerviewrenderers.demo.R;
 import me.alexrs.recyclerviewrenderers.items.ItemFry;
@@ -26,13 +26,9 @@ import me.alexrs.recyclerviewrenderers.items.ItemFry;
  * @author Alejandro Rodriguez <https://github.com/Alexrs95>
  */
 public class ViewHolderFry extends RenderViewHolder<ItemFry> {
-
-    @InjectView(R.id.button)
-    Button button;
-
     public ViewHolderFry(View itemView) {
         super(itemView);
-        ButterKnife.inject(this, itemView);
+        ButterKnife.bind(this, itemView);
     }
 
     @OnClick(R.id.button)

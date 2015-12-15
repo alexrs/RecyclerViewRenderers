@@ -84,7 +84,7 @@
     <orderEntry type="library" exported="" name="recyclerview-v7-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-23.1.1" level="project" />
-    <orderEntry type="library" exported="" name="butterknife-5.1.2" level="project" />
+    <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
     <orderEntry type="module" module-name="recyclerview-renderers-lib" exported="" />
   </component>
 </module>
