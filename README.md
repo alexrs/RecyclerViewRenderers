@@ -13,12 +13,12 @@ It has been designed to help you have your code separated and decoupled.
 
 Thanks to [Sefford](https://github.com/Sefford) for his great library [Brender](https://github.com/Sefford/brender), that has inspired me to write this one.
 
-####Download
+#### Download
 ```GROOVY
 compile 'me.alexrs:recyclerview-renderers:1.0.4'
 ```
 
-##Usage
+## Usage
 First, we have to declare a RecyclerView in the layout:
 ```XML
 <android.support.v7.widget.RecyclerView
@@ -43,7 +43,7 @@ RendererAdapter adapter = new RendererAdapter(items, new RendererBuilder(new Fac
 recyclerView.setAdapter(adapter);
 ```
 
-####Renderables
+#### Renderables
 This classes should contain the data and must implement Renderable. The method `getRenderableId` returns the ID of the layout that will display the data.
 
 ```JAVA
@@ -72,7 +72,7 @@ public class ItemBender implements Renderable {
     }
 }
 ```
-####ViewHolder
+#### ViewHolder
 
 The `ViewHolder` pattern was used in ListViews to recycle the views and reduce the usage of `findViewById`. In the new `RecyclerView` the `ViewHolder` is used to indicate the `Adapter` how to set the data to the views.
 You can indicate here the action that should be performed when this item is clicked in the `RecyclerView` and you can also use [ButterKnife](https://github.com/JakeWharton/butterknife)!  
@@ -106,7 +106,7 @@ public class ViewHolderBender extends RenderViewHolder<ItemBender> implements Vi
 }
 ```
 
-####Renderer
+#### Renderer
 The `Renderer` is the class responsible for creating the `ViewHolder` of each `Renderable`. The method `onCreateViewHolder` should return the `ViewHolder`.
 
 ```JAVA
@@ -126,7 +126,7 @@ public class ItemBenderRenderer extends Renderer {
 }
 ```
 
-####Factory
+#### Factory
 You have to create a class that implements `RendererFactory`. The method `getRenderer` will be implemented. It will receive as parameter the id of the layout returned by `getRenderableId` in your `Renderable`.  
 
 ```JAVA
@@ -146,7 +146,7 @@ public class Factory implements RendererFactory {
     }
 }
 ```
-####TODO
+#### TODO
 * Test
 
 License
