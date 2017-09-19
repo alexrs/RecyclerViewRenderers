@@ -1,11 +1,2 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.alexrs.recyclerviewrenderers.lib">
-
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name">
-
-    </application>
-
-</manifest>
+    package="me.alexrs.recyclerviewrenderers.lib" />
